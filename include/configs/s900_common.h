@@ -32,6 +32,8 @@
 #define CONFIG_SYS_MALLOC_LEN		(32 * 1024 * 1024 + CONFIG_ENV_SIZE)
 
 #define CONFIG_EXTRA_ENV_SETTINGS_COMMON				\
+	"ipaddr=192.168.1.43\0"					\
+	"serverip=192.168.1.211\0"					\
 	"bootpart=1\0"							\
 	"kernel_addr_r=0x80000\0"					\
 	"ramdisk_addr_r=0x1ffffc0\0"					\

@@ -18,8 +18,9 @@
 						"name=SWAP,size=768MiB;name=BOOT_MSG,size=-;\"; "		\
 						"gpt write mmc 1 ${partitions};\0"
 
-#define CONFIG_BOOTCOMMAND		"run emmcboot;"
+#define CONFIG_BOOTCOMMAND		"usb start; tftp 0x80000 Image; tftp 0x1ffffc0 uInitrd; tftp 0x10000000 s900_96board.dtb;"
 #define CONFIG_BOOTDELAY		1	/* autoboot after 1 seconds */
+#define CONFIG_BOOTARGS "console=ttyS5,115200n8 root=/dev/mmcblk0p3  rw panic=-1 fixrtc  rootwait"
 
 #define CONFIG_PWM_OWL
 
@@ -105,8 +106,12 @@
 #define CONFIG_G_DNL_UMS_PRODUCT_NUM	0x0C02
 
 /* USB_ETHER */
-#define CONFIG_USB_ETHER
-#define CONFIG_USB_ETH_RNDIS
+/* #define CONFIG_USB_ETHER */
+/* #define CONFIG_USB_ETH_RNDIS */
+#define CONFIG_USB_HOST_ETHER
+#define CONFIG_USB_ETHER_ASIX
+#define CONFIG_USB_ETHER_ASIX88179
+#define CONFIG_USB_ETHER_MCS7830
 #define CONFIG_USBNET_DEV_ADDR		"de:ad:be:ef:00:01"
 #define CONFIG_USBNET_HOST_ADDR	"de:ad:be:ef:00:02"
 #define CONFIG_LIB_RAND

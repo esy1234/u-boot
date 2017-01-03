@@ -288,7 +288,7 @@ CONFIG_CMD_NET=y
 # CONFIG_CMD_TFTPPUT is not set
 # CONFIG_CMD_TFTPSRV is not set
 # CONFIG_CMD_RARP is not set
-# CONFIG_CMD_DHCP is not set
+CONFIG_CMD_DHCP=y
 CONFIG_CMD_NFS=y
 # CONFIG_CMD_PING is not set
 # CONFIG_CMD_CDP is not set
