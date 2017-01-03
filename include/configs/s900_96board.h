@@ -20,7 +20,7 @@
 
 #define CONFIG_BOOTCOMMAND		"usb start; tftp 0x80000 Image; tftp 0x1ffffc0 uInitrd; tftp 0x10000000 s900_96board.dtb;"
 #define CONFIG_BOOTDELAY		1	/* autoboot after 1 seconds */
-#define CONFIG_BOOTARGS "console=ttyS5,115200n8 root=/dev/mmcblk0p3  rw panic=-1 fixrtc  rootwait"
+#define CONFIG_BOOTARGS "console=ttyS5,115200n8 root=/dev/nfs nfsroot=192.168.1.211:/home/esy/nfsdir/rootfs scandelay=20 ip=dhcp rw panic=-1 fixrtc  rootwait"
 
 #define CONFIG_PWM_OWL
 
